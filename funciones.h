@@ -17,7 +17,6 @@ void rellenarceros(int size,int **a){
         for (int j = 0; j < size; ++j) {
             a[i][j]=0;
         }
-        puts("\n");
     }
 }
 
@@ -50,10 +49,36 @@ void CuadroImpar(int size,int **a){
     MostrarMatriz(size,a);
 }
 
-void CuadroPar(int size,int **a){
+void CuadroPar4n(int size,int **a) {
+    for (int i = 0; i < size; ++i)
+        for (int j = 0; j < size; ++j)
+            a[i][j] = (size * i) + j + 1;
 
+    for (int i = 0; i < size / 4; ++i)
+        for (int j = 0; j < size / 4; ++j)
+            a[i][j] = (size * size + 1) - a[i][j];
+
+    for (int i = 0; i < size / 4; i++)
+        for (int j = 3 * (size / 4); j < size; j++)
+            a[i][j] = (size * size + 1) - a[i][j];
+
+    for (int i = 3 * size / 4; i < size; i++)
+        for (int j = 0; j < size / 4; j++)
+            a[i][j] = (size * size + 1) - a[i][j];
+
+    for (int i = 3 * size / 4; i < size; i++)
+        for (int j = 3 * size / 4; j < size; j++)
+            a[i][j] = (size * size + 1) - a[i][j];
+
+    for (int i = size / 4; i < 3 * size / 4; i++)
+        for (int j = size / 4; j < 3 * size / 4; j++)
+            a[i][j] = (size * size + 1) - a[i][j];
+
+    MostrarMatriz(size,a);
 }
 
+void CuadroPar4n2(int size,int **a){
 
+}
 
 #endif
