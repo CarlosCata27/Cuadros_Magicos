@@ -2,35 +2,27 @@
 #include <stdlib.h>
 #include "funciones.h"
 
+
 int main() {
-    int opc, size;
-    int **cuadro;
-    puts("Cuadros Magicos\n"
-         "Digite un numero para definir el tamanio de la matriz\n");
+    int size, **cuadro;
+
+    puts(">>>> Cuadros Magicos <<<<\n"
+         "Digite un numero para definir la dimension de la matriz:");
     scanf("%d", &size);
-    printf("El tamanio de la matriz es: %d\n", size);
-    if (size % 2 != 0) {
-        puts("Tamanio impar");
-        cuadro = (int **) malloc(size * sizeof(int *));
-        for (int i = 0; i < size; ++i)
-            cuadro[i] = (int *) malloc(size * sizeof(int));
-
-        rellenarceros(size, cuadro);
-        CuadroImpar(size, cuadro);
-    } else {
-        puts("Tamanio par");
-        cuadro = (int **) malloc(size * sizeof(int *));
-        for (int i = 0; i < size; ++i)
-            cuadro[i] = (int *) malloc(size * sizeof(int));
-
-        rellenarceros(size, cuadro);
-        CuadroPar4n(size, cuadro);
+    if (size<3){
+        printf("\nError: La dimension del cuadro debe ser mayor a dos.\n\n");
+        return -1;
     }
+    printf("La Dimension de la matriz es: %d\n", size);
 
+    cuadro = (int **) malloc(size * sizeof(int *));
+    for (int i = 0; i < size; ++i) {
+        cuadro[i] = (int *) malloc(size * sizeof(int));
+    }
+    rellenarceros(size, cuadro);
 
-    puts("Adios :)");
+    CalculoCuadros(size,cuadro);
 
-
-    printf("\n");
+    puts("\nMADE BY: Catarino Corralco Carlos Alberto & Calderon Davila Juan Carlos");
     return 0;
 }
