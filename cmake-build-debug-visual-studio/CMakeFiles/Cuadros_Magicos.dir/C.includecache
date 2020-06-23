@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/CarlosCata/Documents/GitHub/Cuadros_Magicos/funciones.h
+math.h
+-
+
+C:/Users/CarlosCata/Documents/GitHub/Cuadros_Magicos/main.c
+stdio.h
+-
+stdlib.h
+-
+funciones.h
+C:/Users/CarlosCata/Documents/GitHub/Cuadros_Magicos/funciones.h
+

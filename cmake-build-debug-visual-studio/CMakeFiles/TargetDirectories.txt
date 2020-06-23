@@ -1,0 +1,3 @@
+C:/Users/CarlosCata/Documents/GitHub/Cuadros_Magicos/cmake-build-debug-visual-studio/CMakeFiles/Cuadros_Magicos.dir
+C:/Users/CarlosCata/Documents/GitHub/Cuadros_Magicos/cmake-build-debug-visual-studio/CMakeFiles/edit_cache.dir
+C:/Users/CarlosCata/Documents/GitHub/Cuadros_Magicos/cmake-build-debug-visual-studio/CMakeFiles/rebuild_cache.dir
