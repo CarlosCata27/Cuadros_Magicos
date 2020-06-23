@@ -20,7 +20,15 @@ void rellenarceros(int size,int **a){
         }
     }
 }
-
+//En este algoritmo iniciaremos la funcion con el tamaño de la matriz que el usuario definio desde el menu,
+// y traeremos un  matriz de memoria dinamica, a manera de que nos posicionaremos en la mitad de la columna en la primera fila
+//De manera que en esa posicion definiremos el mumero 1, despues guardaremos en otras variables la posicion actual en la que estamos
+// dentro de la matriz, entonces entraremos en un bucle for el cual nos ayudara a rellenar nuestro cuadro magico, esto mediante
+//por medio de que retrocederemos una filay una columna para poder colocar nuestro siguiente numero del cuadro magico, mediante
+//condicionales verificaremos que el espacio anterior en la fila y despues columna no sea menor a 0 ya que est provocaria que nos desbordaramos
+// de la matriz, una vez que terminamos de verificar posiciones, actualizaremos el numero que sigue en la matriz, despues volverems a
+// guardar la posicion actual en la que estamos y volveremos a repetir el mismo bucle for, al final de que nuestro cuadro magico esta listo}
+//imprimiremos en la pantalla el resultado final.
 void cuadroImpar(int size,int **a){
     int mitad=size/2;
     int ubicacionC=mitad;
