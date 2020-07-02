@@ -24,5 +24,6 @@ int main() {
     CalculoCuadros(size,cuadro);
 
     puts("\nMADE BY: Catarino Corralco Carlos Alberto & Calderon Davila Juan Carlos");
+    system("pause");
     return 0;
 }
