@@ -61,43 +61,51 @@ void cuadroImpar(int size,int **a){
 void cuadro4n(int size,int **a){
     int i, j;
 
+    //Llenamos el cuadro comenzando desde el 1
     for ( i = 0; i < size; i++) {
         for (j = 0; j < size; j++) {
             a[i][j] = (size * i) + j + 1;
         }
     }
 
+    //A partir de aqui iremos cambiando los valores de los elementos del cuadro,
+    //en una localizacion especifica dada por medio de la regla: (n * n + 1) - a[i,j]
+    //Comenzando por la esquina superior izquierdo(orden (n/4)*(n/4))
     for ( i = 0; i < size/4; i++) {
         for (j = 0; j < size / 4; j++) {
             a[i][j] = (size * size + 1) - a[i][j];
         }
     }
 
+    //Esquina superior derecha(orden (n/4)*(n/4))
     for ( i = 0; i < size/4; i++) {
         for (j = 3 * (size / 4); j < size; j++) {
             a[i][j] = (size * size + 1) - a[i][j];
         }
     }
 
+    //Esquina inferior izquierda(orden (n/4)*(n/4))
     for ( i = 3 * size/4; i < size; i++) {
         for (j = 0; j < size / 4; j++) {
             a[i][j] = (size * size + 1) - a[i][j];
         }
     }
 
+    //Esquina inferior derecha (orden (n/4)*(n/4))
     for ( i = 3 * size/4; i < size; i++) {
         for (j = 3 * size / 4; j < size; j++) {
             a[i][j] = (size * size + 1) - a[i][j];
         }
     }
 
-
+    //Finalmente el centro del cuadro (orden (n/2)*(n/2))
     for ( i = size/4; i < 3 * size/4; i++) {
         for (j = size / 4; j < 3 * size / 4; j++) {
             a[i][j] = (size * size + 1) - a[i][j];
         }
     }
 
+    //E imprimimos la matriz
     MostrarMatriz(size,a);
 }
 
@@ -132,7 +140,7 @@ int** cuadritoImpar(int size,int **result) {
     return result;
 }
 
-int numDigits(int n){
+int numDigitos(int n){
     int count = 1;
 
     while(n>=10){
@@ -186,7 +194,7 @@ void cuadro4n2(int size,int **resultadoFinal){
     int x,y;
     for(x=0;x<size;x++){
         for(y=0;y<size;y++){
-            printf("%*s%d",size - numDigits(resultadoFinal[x][y]),"",resultadoFinal[x][y]);
+            printf("%*s%d",size - numDigitos(resultadoFinal[x][y]),"",resultadoFinal[x][y]);
         }
         printf("\n");
     }
